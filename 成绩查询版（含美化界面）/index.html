@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Chuck教务管理系统网络爬虫</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/icon" href="i/favicon.ico">
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="lib/amazeui/css/amazeui.min.css">
+	<!-- 自己的css -->
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="am-g am-g-fixed doc-am-g">
+<div class="am-u-sm-centered am-u-sm-5">
+	<div class="am-g">
+	 <div class="am-u-sm-12 " id = "loginTitle">
+	 	<img src="i/login.png" alt="Chuck教务管理系统网络爬虫">
+	 </div>
+	 <div class="am-u-sm-12 loginbox">
+	 	<form action="action" method="POST" role="form" class="am-form">
+	 	<div class="am-input-group">
+	 	  <span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span>
+	 	  <input id = "loginUserName" type="text" class="am-form-field" placeholder="用户名" >
+	 	</div>
+
+	 	<div class="am-input-group ">
+	 	  <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span>
+	 	  <input type="password" id = "loginPassWord"  class="am-form-field" placeholder="密码">
+	 	</div>
+    <div class="am-form-inline">
+      
+    <div class="am-input-group">
+      <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span>
+      <input type="text" id = "captcha"  class="am-form-field" placeholder="验证码">
+    </div>
+      <div class="am-input-group">
+      <img id="verifyCode" src="verifyCode.jpg">
+      </div>
+   
+    </div>
+     <div class="am-form-group am-form-select">
+    <select class="" id="host" onchange="changehost()">
+      <option value="1">广东工业大学校园网</option>
+      <option value="2">广东工业大学电信网</option>
+    </select>
+  </div>
+
+  <div class="am-form-group">
+      <div class="am-checkbox">
+        <label>
+          <input type="checkbox" id="auto" onchange="changeAuto()"> 记住账号密码并自动登录
+        </label>
+      </div>
+  </div>
+	 	  <div id ="loginBtn" class="am-btn am-btn-primary am-btn-block ">登录</div>
+	 	</form>
+	 </div>
+	</div>
+
+</div>
+</div>
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/amazeui/js/amazeui.min.js"></script>
+
+<!-- 自己的js -->
+<script src="js/js.js"></script>
+
+</body>
+</html>

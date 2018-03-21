@@ -1,0 +1,177 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Chuck教务管理系统网络爬虫</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/icon" href="i/favicon.ico">
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="lib/amazeui/css/amazeui.min.css">
+	<!-- 自己的css -->
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/theme.black-ice.css">
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse Header" >
+  <h1 class="am-topbar-brand ">
+    <a href="#"><img src="i/login_w.png" alt="Chuck文件管理系统"></a>
+  </h1>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav">
+      <li class="am-active"><a href="#">首页</a></li>
+    </ul>
+
+    
+  
+  
+    <div class="am-topbar-right" id="exit">
+      <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">退出</button>
+    </div>
+    <div class="am-topbar-right " id="userName">
+      <span class="am-icon-user"></span>
+    </div>
+
+  </div>
+</header>
+<div class="am-g am-g-collapse">
+<div class="am-u-sm-10 am-u-sm-offset-1 ">
+  <div class="am-u-sm-4 am-u-md-4 am-u-lg-3 left">
+
+      <div class="am-panel am-panel-default">
+        <div class="am-panel-hd"><i class="am-icon-th-large"></i> 操作功能</div>
+        <div class="am-panel-bd">
+        <button type="button" class="am-btn  am-round am-btn-block functionBtn" id="checkScoreBtn">
+        <i class="am-icon-search"></i> 查询考试成绩</button>
+    <button type="button" class="am-btn  am-round am-btn-block functionBtn" id="checkCETScoreBtn">
+    <i class="am-icon-search"></i> 查询等级考试成绩</button>
+    <button type="button" class="am-btn  am-round am-btn-block functionBtn" id="aboutBtn">
+    <i class="am-icon-pencil-square"></i> 关于</button>
+        </div>
+      </div>
+
+
+    </div>
+<div class="am-u-sm-8 am-u-md-8 am-u-lg-9 checkScore hidden">
+
+<section class="am-panel am-panel-default">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title"><i class="am-icon-search"></i> 查询考试成绩</h3>
+  </header>
+  <div class="am-panel-bd am-g ">
+
+    <div class="am-u-sm-10 am-u-sm-offset-1 am-form-group am-form-select scorebox ">
+    <div class="am-u-sm-11 am-u-lg-12">
+    <label class="">要查询的成绩时间段：</label>
+      <select class="grade">
+      <OPTGROUP LABEL="年级">
+      <option value="0">大一</option>
+      <option value="1">大二</option>
+      <option value="2">大三</option>
+      <option value="3">大四</option>
+      </OPTGROUP>
+    </select>
+    <select class="term">
+    <OPTGROUP LABEL="学期">
+      <option value="1">上</option>
+      <option value="2">下</option>
+    </OPTGROUP>
+    </select>
+    </div>
+    
+    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+      <div id ="checkScoreByGradeBtn" class="am-btn am-btn-primary am-round am-btn-sm ">查询该学年成绩</div>
+      <div id ="checkScoreByTermBtn" class="am-btn am-btn-primary am-round am-btn-sm">查询该学期成绩</div>
+      <div id ="checkAllScoreBtn" class="am-btn am-btn-primary am-round am-btn-sm">查询所有成绩</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer class="am-panel-footer">
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-12 am-u-lg-10 am-u-lg-offset-1" id="scorebox">
+
+      </div>
+    </div>
+
+      
+
+  </footer>
+</section>
+</div>
+
+
+<div class="am-u-sm-8 am-u-md-8 am-u-lg-9 checkCETScore hidden">
+
+<section class="am-panel am-panel-default">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title"><i class="am-icon-search"></i> 查询等级考试成绩</h3>
+  </header>
+  <footer class="am-panel-footer">
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-12 " id="CETscorebox">
+
+      </div>
+    </div>
+
+  </footer>
+</section>
+</div>
+
+
+<div class="am-u-sm-8 am-u-md-8 am-u-lg-9 about">
+
+<section class="am-panel am-panel-default">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title"><i class="am-icon-pencil-square"></i> 关于</h3>
+  </header>
+  <footer class="am-panel-footer">
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-12 am-u-lg-10 am-u-lg-offset-1" id="aboutbox">
+        <p>
+          本爬虫基于B/S结构，使用PHP+HTML+CSS+JS完成，100%实现了课程设计书的所有要求。
+          <p>1.  熟悉网络爬虫的工作原理和结构。</p>
+          <p>2.  熟悉HTTP协议，学会分析HTTP封包和筛选出指定数据</p>
+          <p>3.  通过网络爬虫定向获取指定数据并进行再组织。</p>
+          <p>4.  使用可视化界面，B/S结构。</p>
+        </p>
+        <div id="aboutName">
+          <p>13计科（2）班</p>
+          <p>成 博</p>
+          <p>2016年7月3日</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</section>
+</div>
+
+</div>
+
+</div>
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/amazeui/js/amazeui.min.js"></script>
+<script type="text/javascript" src="lib/jquery.tablesorter.js"></script> 
+<!-- 自己的js -->
+<script src="js/js.js"></script>
+
+</body>
+</html>

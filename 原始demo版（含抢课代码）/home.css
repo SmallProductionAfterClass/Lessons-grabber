@@ -1,0 +1,62 @@
+*{font-family: "Microsoft Yahei";font-size: 16px;}
+
+body{
+	background:#fff url("http://i2.tietuku.com/f59272acaa0140a8.jpg") no-repeat !important;
+	background-size:cover !important;
+}
+#form1{
+	background-color: rgba(255,255,255,0.4);
+	padding: 50px;
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -120px;
+	margin-top: -85px;
+	width: 240px;
+	height: 170px;
+	color: #11449E;
+}
+#TextBox2{margin-top: 10px;
+}
+#txtSecretCode{
+	width: 97px;
+	margin-left: 3px;
+}
+#txtSecretCode +a img {
+	position: relative;
+	top: 7px;
+	left: 5px;
+}
+#Button1:hover{
+	background: #598CCC ;
+}
+
+#Button1,.button{
+	margin-top: 10px;
+	cursor: pointer;
+	margin-left: 5px;
+	width: 230px;
+	height: 38px;
+	border: 0 none;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "Microsoft Yahei";
+	color: #fff;
+	background: #598CDF ;
+	text-shadow: 1px 0px 0px #154BA2;
+}
+#host{
+	width: 180px;
+	margin-top: 8px;
+}
+#auto_login{
+	margin-left: 50px;
+margin-top: 10px
+}
+.checkscore{
+	color:#11449E;
+}
+.button{width: auto;}
+div.button{display: inline-block;}
+.button a {color: #FFF; text-decoration: none;text-align: center;line-height: 38px;}

@@ -1,0 +1,112 @@
+﻿body{
+	background-color: #eee;
+	cursor:default;
+}
+html,body{
+    margin:0px;
+    height:100%;
+    overflow: auto;
+}
+
+#loginTitle{
+	margin-top: 180px;
+	margin-bottom: 70px;
+}
+#loginTitle img{
+	margin-left: -50px;
+}
+.loginBtn{
+	margin-top: 20px;
+}
+
+/*以下为登录后页面*/
+#userName{
+	margin-top: 10px;
+	font-size: 1.2em;
+}
+#exit button{
+	font-size: 1em;
+	background-color: #3a3a3a;
+	border-color: #252424
+}
+#exit button:hover{
+	background-color: #292828;
+	border-color: #252424
+}
+.am-topbar-brand{
+	line-height: 28.8px;
+}
+
+.am-topbar-brand > a >img {
+	margin-top: 0;
+	padding-top: 0;
+	height: 50px;
+}
+.Header{
+	background-color: #333;
+	border-color: #333;
+	margin-bottom:0;
+}
+.functionBtn{
+	background-color: inherit;
+	text-align: left;
+	text-indent: 1em;
+	outline-style:none;
+} 
+.functionBtn:focus{
+	outline-style:none;
+	}   
+.functionBtn:hover{
+	background-color: #f1f1f2;
+}
+/*左分栏*/
+.left{
+	height: 1000px;
+	border-right:1px solid #eee;
+}
+.am-panel-hd{
+	text-align: center;
+	font-size: 1.1em;
+	border-bottom-style: none;
+
+}
+.am-panel{
+	margin-bottom: 0;
+	border-style: none;
+}
+
+
+/*右分栏*/
+
+tr{
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+
+}
+
+
+	 .roundedCorners {
+	    
+	    padding: 0 10px;
+	    border-radius: 1em;
+	    -moz-border-radius: 1em;
+	    -webkit-border-radius: 1em;
+	}
+.scorebox{
+	margin-bottom: 0px!important;
+}
+#scorebox{
+	margin-bottom: 100px;
+}
+.hidden{display:none;}
+
+#aboutName{
+	width: 200px;
+	text-align: center;
+	margin-left: auto;
+}
